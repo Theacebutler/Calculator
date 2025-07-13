@@ -1,0 +1,67 @@
+* {
+    box-sizing: content-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+.Page {
+    padding: 0 25%;
+    background-color: aquamarine;
+    /* justify-items: center; */
+    /* display: grid; */
+    /* grid-template-areas:  */
+    /* "win win" */
+    /* "DelAndBaS functions" */
+    /* "num-grid functions" */
+    /* "num-grid functions" */
+    /* "num-grid functions"; */
+}
+.Window {
+    grid-area: win;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+.Result {
+    text-align: right;
+    font-size: 90px;
+}
+
+.DeleteAndBackSpace {
+    grid-area: DelAndBaS;
+}
+
+.MathFunctions {  
+    display: flex;
+    flex-direction: column;
+    grid-area: functions;
+}
+.AllThaNumbers {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    /* grid-area: num-grid; */
+    display: flex;
+    flex-direction: column;
+}
+.NumRow {
+    /* display: flex;
+    float: left; */
+}
+.N789 {
+    grid-area: 789;
+}
+.N456 {
+    grid-area: 456;
+}
+.N123 {
+    grid-area: 123;
+}
+.N0 {
+    grid-area: 0;
+}
