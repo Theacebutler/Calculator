@@ -1,67 +1,93 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-
 }
-
 
 .Page {
-    padding: 0 25%;
-    background-color: aquamarine;
-    /* justify-items: center; */
-    /* display: grid; */
-    /* grid-template-areas:  */
-    /* "win win" */
-    /* "DelAndBaS functions" */
-    /* "num-grid functions" */
-    /* "num-grid functions" */
-    /* "num-grid functions"; */
+    margin: auto;
+    margin-top: 30px;
+    width: 400px;
+    /* border: 2px solid black; */
 }
+
 .Window {
     grid-area: win;
     background-color: black;
     color: white;
-    font-size: 20px;
     width: 100%;
-    height: 100px;
 }
-
 .Result {
+    height: 100px;
+    font-size: 60px;
+    padding: 5%;
     text-align: right;
-    font-size: 90px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+.Buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+    "win   win"
+    "Delete   functions"
+    "numbers   functions" ;
+}
 .DeleteAndBackSpace {
-    grid-area: DelAndBaS;
+    grid-area: Delete;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: fit-content;
 }
-
-.MathFunctions {  
-    display: flex;
-    flex-direction: column;
+.MathFunctions {
     grid-area: functions;
+    display: grid;
+    width: fit-content;
 }
-.AllThaNumbers {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
-    /* grid-area: num-grid; */
-    display: flex;
-    flex-direction: column;
+.MathFunctions > * {
+    background-color: rgb(223, 151, 76);
+} .MathFunctions *:hover {
+    background-color: rgb(223, 176, 126);
+} .MathFunctions *:active {
+    background-color: rgb(171, 116, 57);
+}
+.Numbers {
+    grid-area: numbers;
+    display: grid;
+    width: fit-content;
 }
 .NumRow {
-    /* display: flex;
-    float: left; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.N789 {
-    grid-area: 789;
+.NumRow:last-child {
+    display: grid;
+    grid-template-columns: 1fr;
 }
-.N456 {
-    grid-area: 456;
+
+.But {
+    height: 100px;
+    width: 100px;
+    font-size: 200%;
+    font-weight: 500;
+    border: 2px solid black;
 }
-.N123 {
-    grid-area: 123;
+.Delete {
+    width: 200px;
+} 
+#n0 {
+    width: 300px;
 }
-.N0 {
-    grid-area: 0;
+.NumButton, .DeleteAndBackSpace * {
+    background-color:rgb(193, 185, 185);
+
+} .NumButton:hover, .DeleteAndBackSpace *:hover {
+    background-color: rgb(216, 217, 219);
+} .NumButton:active, .DeleteAndBackSpace *:active {
+    background-color: rgb(150, 151, 153);
 }
+
+
+
+
