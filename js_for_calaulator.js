@@ -20,7 +20,6 @@ AllButtons.forEach(button => {
             //add more numbers in the same string
             NumToCalculate = NumToCalculate + buttonType[1] 
             ShowResult.textContent = NumToCalculate
-            console.log(NumToCalculate)
         } else if (buttonType[0] === "DelAndBack") {
             // Delete
             if (buttonType[1] ==="Delete") {
@@ -65,3 +64,5 @@ AllButtons.forEach(button => {
                     
                 }}
 })})
+
+
